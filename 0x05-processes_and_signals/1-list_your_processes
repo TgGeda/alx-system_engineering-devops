@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 # Lists all the process in the system
 
-echo "PID USER COMMAND"
-
-ps -ef --forest | awk '{printf "%-7s%-8s%s\n", 
-2
-,
-2,1, $NF}'
+echo "PID USER     %CPU %MEM COMMAND"
+ps axo pid,user,%cpu,%mem,command --forest | awk '{printf "%-5s %-8s %-5s %-5s %s\n", $1, $2, $3, $4, $5}' | less
