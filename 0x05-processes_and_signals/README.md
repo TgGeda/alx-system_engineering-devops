@@ -32,11 +32,33 @@ echo "The PID of this script is $$"
 # 1. List your processes
 
 ## Write a Bash script that displays a list of currently running processes.
+Write a Bash script that displays a list of currently running processes.
+
+Requirements:
+
+Must show all processes, for all users, including those which might not have a TTY
+Display in a user-oriented format
+Show process hierarchy
 #!/usr/bin/env bash
 
 echo "List of currently running processes:"
 
 ps aux | awk '{print $2, $11}' | grep -v PID
+
+#!/bin/bash
+
+echo "List of currently running processes:"
+
+# use ps command to display all processes for all users with hierarchy
+ps axjf
+
+# display in user-oriented format
+echo ""
+echo "User-oriented format:"
+echo "---------------------"
+ps axjf | awk '{print $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12}'
+
+exit 0
 
 # The ps command is used to display all running processes.
 # The awk command is used to print only the process ID (PID) and process name.
