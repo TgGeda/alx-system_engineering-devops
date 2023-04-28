@@ -26,12 +26,12 @@
 For those who want to know more and learn about all signals, check out [this article](https://www.computerhope.com/unix/signals.htm).
 
 # 0. What is my PID
-#!/bin/bash
+#!/usr/bin/env bash
 echo "The PID of this script is $$"
 # 1. List your processes
 
 ## Write a Bash script that displays a list of currently running processes.
-#!/bin/bash
+#!/usr/bin/env bash
 
 echo "List of currently running processes:"
 
