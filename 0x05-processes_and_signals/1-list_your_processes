@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
 # Lists all the process in the system
 
-ps aux
+echo "PID USER COMMAND"
+
+ps -ef --forest | awk '{printf "%-7s%-8s%s\n", 
+2
+,
+2,1, $NF}'
