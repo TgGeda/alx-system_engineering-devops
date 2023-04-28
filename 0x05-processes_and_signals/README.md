@@ -27,6 +27,7 @@ For those who want to know more and learn about all signals, check out [this art
 
 # 0. What is my PID
 #!/usr/bin/env bash
+
 echo "The PID of this script is $$"
 # 1. List your processes
 
