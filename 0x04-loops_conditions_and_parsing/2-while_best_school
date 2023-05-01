@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # This script is displaying "Best School" 10 times
 count=1 # initialize the variable
-while [ $count -le 10 ]; do # check if the variable is less than or equal to 10
+while [ $count -le 10 ]; 
+do # check if the variable is less than or equal to 10
   echo "Best School" # print the message
   count=$((count + 1)) # increment the variable by 1
 done
