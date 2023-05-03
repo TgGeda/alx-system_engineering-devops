@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 # Define the regular expression
-pattern = /School/
-
+pattern = ARGV[0].scan(/School/).join
+puts pattern
 # Get the first argument
 input = ARGV[0]
 
