@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
-ip -4 addr show | grep -oP '(?<=inet\s)\d+(\.\d+){3}'
+echo "127.0.0.2 localhost" >> /etc/hosts
+echo "8.8.8.8 facebook.com" >> /etc/hosts
