@@ -19,10 +19,10 @@ Positional parameters
   <ul>
   <li>
   </li></ul>
-##man or help:
+## man or help:
 netstat<br/>
 ping
-##Learning Objectives
+## Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 
 # OSI Model
@@ -40,12 +40,12 @@ Typical usage
 Typical geographical size
     </li> 
 </ul>
-##What is a WAN
+## What is a WAN
 <ul><li>
 Typical usage
 Typical geographical size
   </li> </ul>
-##What is the Internet
+## What is the Internet
   <ul>
   <li>
 What is an IP address
