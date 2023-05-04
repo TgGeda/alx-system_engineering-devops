@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# Get the list of listening sockets
+sockets=$(netstat -tlnp | awk '/^tcp/ {print $4}')
+
+# Loop through each socket
+for socket in $sockets; do
+  # Extract the port number
+  port=$(echo $socket | awk -F: '{print $2}')
+
+  # Get the process listening on this socket
+  pid=$(lsof -i :$port -sTCP:LISTEN -t)
+
+  # Get the name of the process
+  name=$(ps -p $pid -o comm=)
+
+  # Display the socket, PID, and process name
+  echo "Socket: $socket"
+  echo "PID: $pid"
+  echo "Process Name: $name"
+  echo ""
+done
