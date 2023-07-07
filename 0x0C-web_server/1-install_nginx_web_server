@@ -1,21 +1,19 @@
 #!/usr/bin/env bash
+# configure ubunu server to instal nginx
 
-# Update and install Nginx
+# update and install nginx
 sudo apt-get update -y -qq && \
-sudo apt-get install nginx -y
+	 sudo apt-get install nginx -y
 
-# Start Nginx and allow HTTP traffic
 sudo service nginx start
+
 sudo ufw allow 'Nginx HTTP'
 
-# Set permissions and create backup of default index file
 sudo chown -R "$USER":"$USER" /var/www/html
 sudo chmod -R 755 /var/www
+
 cp /var/www/html/index.nginx-debian.html /var/www/html/index.nginx-debian.html.bckp
 
-# Replace default index file with "Hello World!" message
-echo -e "<html><body><h1>Hello World!</h1></body></html>" | sudo tee /var/www/html/index.html > /dev/null
+echo -e "Hello World!" | dd status=none of=/var/www/html/index.nginx-debian.html
 
-# Restart Nginx service
 sudo service nginx restart
-
