@@ -1,0 +1,33 @@
+When you type https://www.google.com in your browser and press Enter, a complex series of events is triggered that ultimately results in the display of Google's homepage. In this blog post, we'll take a deep dive into what happens behind the scenes when you make a request to Google's website.
+
+## DNS Request
+
+The first step in this process is the Domain Name System (DNS) request. When you type https://www.google.com into your browser, your computer sends a request to a DNS server to resolve the domain name to an IP address. The DNS server responds with the IP address of Google's web server, allowing your computer to establish a connection with it.
+
+## TCP/IP
+
+Once your computer has the IP address of Google's web server, it establishes a Transmission Control Protocol/Internet Protocol (TCP/IP) connection with it. This is done through a three-way handshake process, where your computer sends a SYN packet to Google's web server, which responds with a SYN-ACK packet, and then your computer sends an ACK packet to complete the connection.
+
+## Firewall
+
+Before your computer can establish a connection with Google's web server, it must pass through any firewalls that are in place. Firewalls are network security systems that monitor and control incoming and outgoing network traffic based on predetermined security rules. If your computer passes through the firewall successfully, it can proceed with establishing the TCP/IP connection.
+
+## HTTPS/SSL
+
+Once the TCP/IP connection is established, your browser sends a request to Google's web server for its homepage. However, since you typed https:// instead of http://, the request is encrypted using Hypertext Transfer Protocol Secure (HTTPS) and Secure Sockets Layer (SSL) protocols. This ensures that any data transmitted between your browser and Google's web server is secure and cannot be intercepted by third parties.
+
+## Load-Balancer
+
+Google's web servers receive hundreds of thousands of requests every second. To handle this traffic, Google uses load balancers to distribute incoming requests across multiple web servers. Load balancers use various algorithms to determine which web server should handle each incoming request. This ensures that no single web server becomes overwhelmed with traffic and that the website remains fast and responsive.
+
+## Web Server
+
+Once the load balancer has determined which web server should handle your request, that web server retrieves Google's homepage from its file system or cache and sends it back to your browser in response to its request. The web server also includes any necessary HTML, CSS, JavaScript, and other files required to render the homepage correctly in your browser.
+
+## Application Server
+
+In addition to serving static files like HTML, CSS, and JavaScript, Google's homepage also contains dynamic content that is generated on-the-fly based on various factors like your location, search history, and more. To generate this dynamic content, Google uses application servers that run various software programs and scripts. These application servers retrieve data from various sources like databases and APIs and use it to generate dynamic content that is included in the final response sent back to your browser.
+
+## Database
+
+Finally, to generate dynamic content, Google's application servers need to retrieve data from various databases. These databases store vast amounts of information like search queries, user information, and more. When an application server needs to retrieve data from a database, it sends a query to the database server, which retrieves the requested data and sends it back to the application server. The application server then uses this data to generate dynamic content that is included in the final response sent back to your browser.
